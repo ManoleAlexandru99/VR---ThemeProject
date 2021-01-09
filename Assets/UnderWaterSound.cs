@@ -16,12 +16,7 @@ public class UnderWaterSound : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         particleLauncher.transform.position = other.transform.position;
-
-        if (other.CompareTag("Ball"))
-        {
-            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            
-        }
+        
 
         if (other.CompareTag("Player") )
             player.Play ();
