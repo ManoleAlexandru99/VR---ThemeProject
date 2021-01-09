@@ -19,22 +19,11 @@ public class LadderScript : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider col)
-    {
-        if (col.CompareTag("Ladder"))
-        {
-            Debug.Log("insideLadder");
-            //playerInput.enabled = false;
-            insideLadder = true;
-            
-        }
-    }
-    
     private void OnTriggerExit(Collider col)
     {
         if (col.CompareTag("Ladder"))
         {
-            Debug.Log("outsideLadder");
+            
             //playerInput.enabled = true;
             insideLadder = false;
         }
