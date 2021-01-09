@@ -15,10 +15,20 @@ public class LadderScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         insideLadder = false;
 
     }
 
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.CompareTag("Ladder"))
+        {
+            
+            //playerInput.enabled = true;
+            insideLadder = true;
+        }
+    }
     private void OnTriggerExit(Collider col)
     {
         if (col.CompareTag("Ladder"))

@@ -19,8 +19,9 @@ public class Objective2Script : MonoBehaviour
         if (inZone == true && Input.GetKey(KeyCode.E))
         {
             player.enabled = false;
-            player.transform.position = new Vector3(0, 0, 0);
+            player.transform.position = new Vector3(1955f, 10f, -33f);
             player.enabled = true;
+            inZone = false;
         }
     }
     
